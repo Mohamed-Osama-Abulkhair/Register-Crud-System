@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahlula</title>
+    <link rel="icon" href="Images/icon.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="reload" class="d-none">
+      <img src="Images/reload.gif" alt="reloading" />
+    </div>
+    <div class="container-fluid p-4">
+      <div><img src="Images/2nd-logo.svg" alt="form image" width="150px" /></div>
+
+      <div class="row pt-5">
+        <div class="col-md-6">
+          <h3>Welcome to MAHLULA</h3>
+          <div id="blue-rectangel"></div> 
+          <p class="main-para">Sign up to continue to your <br />account</p>
+          <div><img class="w-100" src="Images/lamp.png" alt="" /></div>
+        </div>
+        <div class="col-md-6 form-sign form-up">
+          <form id="form">
+            <h5>Join MAHLULA for Free</h5>
+            <button>
+              <img src="Images/facebook.svg" alt="" /> Continue with Facebook
+            </button>
+            <button>
+              <img src="Images/Google.png" alt="" /> Continue with Google
+            </button>
+            <div class="or-line">
+              <div class="or-rect"></div>
+              <p>or</p>
+              <div class="or-rect"></div>
+            </div>
+
+            <div class="name-input">
+              <input id="nameInput" type="text" placeholder="Name" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="error"></div>
+
+            <div class="email-input">
+              <input id="email" type="text" placeholder="Email address" />
+              <i class="fa-solid fa-envelope up-envelope"></i>
+            </div>
+            <div class="error"></div>
+
+            <div class="password-input">
+              <input
+                id="password-input"
+                type="password"
+                placeholder="password"
+              />
+              <i
+                id="up-password-icon"
+                class="fa-solid fa-eye in-password-icon"
+                style="color: #000000"
+              ></i>
+              <i class="fa-solid fa-lock up-lock"></i>
+            </div>
+            <div class="error"></div>
+
+            <div id="business">
+              <div class="select-option">
+                <input
+                  id="select-input"
+                  type="text"
+                  placeholder="Select your business..."
+                  readonly
+                />
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <input id="search" type="text" placeholder="search..." />
+                </div>
+                <ul class="list-unstyled m-auto options" id="options">
+                  <li value="">Advertising</li>
+                  <li value="">Barber</li>
+                  <li value="">Clinic</li>
+                  <li value="">Hospital</li>
+                  <li value="">School</li>
+                </ul>
+              </div>
+            </div>
+            <div class="error"></div>
+            <button id="create-account">
+              Create Account
+            </button>
+            <p class="agree-para">
+              By signing up you agree to MAHLULA's
+              <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+            </p>
+            <p class="already-para">
+              Already have an account?
+              <a href="login.html"> Sign in </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js
+"></script>
+
+    <script src="js/sign.js"></script>
+  </body>
+</html>

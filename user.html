@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahlula</title>
+    <link rel="icon" href="Images/icon.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="css/style-account.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid p-0 m-auto">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="front position-fixed">
+            <div class="back-up">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <div class="logo">
+                <img src="Images/main-logo.svg" alt=" Mahlula Logo" width="120px" />
+              </div>
+              <h4 id="business-name"></h4>
+              <div class="tabs d-flex align-items-center">
+                <i class="fa-solid fa-border-all"></i>
+                <h6 class="main-para">Dashboard</h6>
+              </div>
+              <div class="tabs d-flex align-items-center agenda">
+                <i class="fa-regular fa-calendar"></i>
+                <h6 class="main-para">Agenda</h6>
+              </div>
+            </div>
+            <div class="tabs-active d-flex align-items-center">
+              <i class="fa-solid fa-user-group"></i>
+              <h6 class="main-para">Clients</h6>
+            </div>
+            <div class="back-down">
+              <div class="tabs d-flex align-items-center employee">
+                <i class="fa-solid fa-user-nurse"></i>
+                <h6 class="main-para">employees</h6>
+              </div>
+              <div class="tabs d-flex align-items-center">
+                <i class="fa-solid fa-syringe"></i>
+                <h6 class="main-para">products</h6>
+              </div>
+              <div class="tabs d-flex align-items-center">
+                <i class="fa-regular fa-file-zipper"></i>
+                <h6 class="main-para">Report</h6>
+              </div>
+              <div class="tabs d-flex align-items-center">
+                <i class="fa-solid fa-gear"></i>
+                <h6 class="main-para">Setting</h6>
+              </div>
+              <a href="login.html" class="text-decoration-none" id="logout">
+                <div class="tabs d-flex align-items-center log-out">
+                  <i
+                    class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"
+                  ></i>
+                  <h6 class="main-para">Log out</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 form-sign form-up">
+          <div class="d-flex justify-content-between pt-3 bar">
+        <i class="fa-solid fa-outdent fa-flip-horizontal"></i>
+            <div></div>
+            <div class="d-flex align-items-center">
+              <div class="img">
+                <img src="Images/user.png" alt="profile image" id="profile-img" />
+                <label for="input-file"
+                  ><i class="fa-solid fa-camera" title="upload your photo"></i
+                ></label>
+              </div>
+
+              <input type="file" id="input-file" class="d-none" />
+              <h5 id="profile-name"></h5>
+            </div>
+          </div>
+          <div class="form-client">
+            <form id="form">
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 position-relative"
+              >
+                <label for="client">Name</label>
+                <input class="form-control" type="text" id="client" />
+                <div class="error-message d-none">
+                  <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+                  <p class="m-0 py-1">
+                    Enter a real name at least 3 characters
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 position-relative"
+              >
+                <label for="phone">Phone</label>
+                <input class="form-control" type="text" id="phone" />
+                <div class="error-message d-none">
+                  <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+                  <p class="m-0 py-1">Only Egyptian numbers are accepted</p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 position-relative"
+              >
+                <label for="department">Department</label>
+                <input class="form-control" type="text" id="department" />
+                <div class="error-message d-none">
+                  <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+                  <p class="m-0 py-1" id="department-error-text">
+                    Enter a real name at least 3 characters
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 position-relative"
+              >
+                <label for="price">Price</label>
+                <input class="form-control" type="text" id="price" />
+                <div class="error-message d-none">
+                  <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+                  <p class="m-0 py-1" id="price-error-text">
+                    Only numbers are accepted
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-4 position-relative"
+              >
+                <label for="employee">employee</label>
+                <input class="form-control" type="text" id="employee" />
+                <div class="error-message d-none">
+                  <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+                  <p class="m-0 py-1" id="employee-error-text">
+                    Enter a real name at least 3 characters
+                  </p>
+                </div>
+              </div>
+              <button disabled class="btn float-end" id="add-btn">
+                <i class="fa-solid fa-plus"></i>Add New
+              </button>
+            </form>
+          </div>
+          <div class="info">
+            <div class="d-flex align-items-center justify-content-between">
+              <input
+                id="search"
+                class="form-control w-50"
+                type="text"
+                placeholder="Search ..."
+              />
+              <button
+                class="btn"
+                id="delete-All-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                disabled
+              >
+                <i class="fa-solid fa-trash"></i>Delete All
+              </button>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-50"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body bg-warning">
+                    <h3 class="text-xl-center">Are you sure?</h3>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      data-bs-dismiss="modal"
+                    >
+                      No
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      data-bs-dismiss="modal"
+                      id="delete-yes"
+                    >
+                      Yes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="table table-striped">
+                <thead>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Department</th>
+                  <th>Price</th>
+                  <th>employee</th>
+                  <th>Action</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+                <tfoot>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th id="total"></th>
+                  <th></th>
+                  <th></th>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js
+  "></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
