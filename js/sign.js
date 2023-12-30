@@ -7,7 +7,7 @@ var errorMessage = document.getElementsByClassName("error");
 var form = document.getElementById("form");
 var inputs = Array.from(document.getElementsByTagName("input"));
 let serverLink =
-  "https://mohamed-osama-abulkhair.github.io/Register-crud-System";
+  "https://mohamed-osama-abulkhair.github.io/Register-crud-System/";
   
 function inputValidation(regex, input, message, messageValue) {
   if (regex.test(input.value)) {
@@ -23,7 +23,7 @@ function inputValidation(regex, input, message, messageValue) {
 
 var regexName = /^[a-zA-Z]{3,9}(?:\s[a-zA-Z]{3,9})*$/;
 if (
-  window.location.href == `${serverLink}/index.html` ||
+  window.location.href == `${serverLink}index.html` ||
   window.location.href == serverLink
 ) {
   nameInput.onkeyup = function () {
@@ -39,7 +39,7 @@ if (
 var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 email.onkeyup = () => {
   if (
-    window.location.href == `${serverLink}/index.html` ||
+    window.location.href == `${serverLink}index.html` ||
     window.location.href == serverLink
   ) {
     inputValidation(
@@ -48,7 +48,7 @@ email.onkeyup = () => {
       errorMessage[1],
       "Provide a valid email address"
     );
-  } else if (window.location.href == `${serverLink}/login.html`) {
+  } else if (window.location.href == `${serverLink}login.html`) {
     inputValidation(
       regexEmail,
       email,
@@ -67,7 +67,7 @@ passwordInput.onkeyup = function () {
     passwordIcon.style.opacity = "1";
     passwordIcon.style.cursor = "pointer";
     if (
-      window.location.href == `${serverLink}/index.html` ||
+      window.location.href == `${serverLink}index.html` ||
       window.location.href == serverLink
     ) {
       inputValidation(
@@ -76,7 +76,7 @@ passwordInput.onkeyup = function () {
         errorMessage[2],
         "Password must be at least 3 characters"
       );
-    } else if (window.location.href == `${serverLink}/login.html`) {
+    } else if (window.location.href == `${serverLink}login.html`) {
       inputValidation(
         regexPassword,
         passwordInput,
@@ -100,7 +100,7 @@ passwordInput.onkeyup = function () {
 };
 
 if (
-  window.location.href == `${serverLink}/index.html` ||
+  window.location.href == `${serverLink}index.html` ||
   window.location.href == serverLink
 ) {
   var li = document.getElementsByTagName("li");
@@ -265,11 +265,11 @@ function signIn() {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   if (
-    window.location.href == `${serverLink}/index.html` ||
+    window.location.href == `${serverLink}index.html` ||
     window.location.href == serverLink
   ) {
     signup();
-  } else if (window.location.href == `${serverLink}/login.html`) {
+  } else if (window.location.href == `${serverLink}login.html`) {
     signIn();
   }
 });
