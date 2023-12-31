@@ -357,7 +357,7 @@ closeTab.addEventListener("click", () => {
 
 function toggleLinks(isOpen) {
   if (isOpen) {
-    links.style.transform = "scale(1, 1)";
+    links.style.transform = "scale(0, 0.5)";
     openTab.style.display = "inline";
     closeTab.style.display = "inline";
   } else {
