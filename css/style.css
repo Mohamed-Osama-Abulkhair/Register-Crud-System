@@ -227,9 +227,6 @@ h5 {
   background-color: #fdb400;
 }
 
-#business {
-  position: relative;
-}
 #select-input {
   cursor: pointer;
 }
@@ -248,10 +245,10 @@ h5 {
 
 .content {
   position: absolute;
-  width: 400px;
+  width: 100%;
   display: none;
-  left: -21%;
-
+  left: 0;
+  z-index: 99;
 }
 #search {
   background-color: #b0b0b0;
@@ -262,20 +259,15 @@ h5 {
   border-radius: 5px 5px 0 0;
   border: 2px solid #b0b0b0;
   margin-bottom: 0px;
-  position: relative;
-  left: 85px;
   z-index: 22;
 }
 
 .list-unstyled {
   background-color: #b0b0b0;
-  width: 400px;
+  width: 100%;
   max-height: 100px;
   overflow-y: scroll;
   border-radius: 0 10px;
-  position: absolute;
-  left: 85px;
-  z-index: 2222;
   padding: 5px 0;
 }
 
@@ -337,6 +329,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
 }
 
 @media (max-width: 600px) {
+  .content {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .form-sign button {
     width: 90%;
   }
